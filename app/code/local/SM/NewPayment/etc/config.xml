@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SM_NewPayment>
+            <version>0.1.0</version>
+        </SM_NewPayment>
+    </modules>
+    <global>
+        <models>
+            <sm_newpayment>
+                <class>SM_NewPayment_Model</class>
+                <resourceModel>sm_newpayment_resource</resourceModel>
+            </sm_newpayment>
+            <sm_newpayment_resource>
+                <class>SM_NewPayment_Model_Resource</class>
+            </sm_newpayment_resource>
+        </models>
+        <blocks>
+            <sm_newpayment>
+                <class>SM_NewPayment_Block</class>
+            </sm_newpayment>
+        </blocks>
+        <helpers>
+            <sm_newpayment>
+                <class>SM_NewPayment_Helper</class>
+            </sm_newpayment>
+        </helpers>
+    </global>
+    <default>
+        <payment>
+            <sm_newpayment>
+                <active>1</active>
+                <model>sm_newpayment/method</model>
+                <order_status>pending</order_status>
+                <title>Smart Payment</title>
+                <allowspecific>0</allowspecific>
+                <group>offline</group>
+            </sm_newpayment>
+        </payment>
+    </default>
+</config>
