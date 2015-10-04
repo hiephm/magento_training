@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SM_NewField>
+            <version>0.1.0</version>
+        </SM_NewField>
+    </modules>
+    <global>
+        <models>
+            <sm_newfield>
+                <class>SM_NewField_Model</class>
+                <resourceModel>sm_newfield_resource</resourceModel>
+            </sm_newfield>
+            <sm_newfield_resource>
+                <class>SM_NewField_Model_Resource</class>
+            </sm_newfield_resource>
+        </models>
+        <blocks>
+            <sm_newfield>
+                <class>SM_NewField_Block</class>
+            </sm_newfield>
+        </blocks>
+        <helpers>
+            <sm_newfield>
+                <class>SM_NewField_Helper</class>
+            </sm_newfield>
+        </helpers>
+        <resources>
+            <sm_newfield_setup>
+                <setup>
+                    <module>SM_NewField</module>
+                </setup>
+            </sm_newfield_setup>
+        </resources>
+
+        <events>
+            <sales_quote_save_before>
+                <observers>
+                    <sm_newfield>
+                        <class>sm_newfield/observer</class>
+                        <method>salesQuoteSaveBefore</method>
+                        <type>singleton</type>
+                    </sm_newfield>
+                </observers>
+            </sales_quote_save_before>
+        </events>
+
+        <fieldsets>
+            <sales_convert_quote>
+                <comments>
+                    <to_order>*</to_order>
+                </comments>
+            </sales_convert_quote>
+        </fieldsets>
+    </global>
+</config>
