@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SM_NewShip>
+            <version>0.1.0</version>
+        </SM_NewShip>
+    </modules>
+    <global>
+        <models>
+            <sm_newship>
+                <class>SM_NewShip_Model</class>
+                <resourceModel>sm_newship_resource</resourceModel>
+            </sm_newship>
+            <sm_newship_resource>
+                <class>SM_NewShip_Model_Resource</class>
+            </sm_newship_resource>
+        </models>
+        <blocks>
+            <sm_newship>
+                <class>SM_NewShip_Block</class>
+            </sm_newship>
+        </blocks>
+        <helpers>
+            <sm_newship>
+                <class>SM_NewShip_Helper</class>
+            </sm_newship>
+        </helpers>
+    </global>
+    <default>
+        <carriers>
+            <sm_newship>
+                <active>1</active>
+                <sallowspecific>0</sallowspecific>
+                <model>sm_newship/carrier_heavyitem</model>
+                <name>Heavy Items</name>
+                <price>3.00</price>
+                <price_heavy>10.00</price_heavy>
+                <weight_threshold>20</weight_threshold>
+                <title>Smart Ship</title>
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+            </sm_newship>
+        </carriers>
+    </default>
+</config>
